@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="consent-root"></div>
+    <script src="https://tags.tiqcdn.com/libs/cookieconsent/v3.1.0/cookieconsent.umd.js"></script>
+    <script>
+      CookieConsent.run({
+        mode: 'opt-in',
+        autoShow: false,
+        categories: {
+          enabled: true,
+          readOnly: true,
+          analytics: {},
+          marketing: {},
+        },
+        language: { default: 'en' },
+      });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
